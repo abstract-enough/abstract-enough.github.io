@@ -3,15 +3,35 @@
     <title>Poisson clock</title>
     <script>
       document.addEventListener("DOMContentLoaded", function(event) {
+
+        function simple_hash(extinction_time)
+        {
+          
+        }
+        function simulation_helper(extinction_time)
+        {
+          if extinction_time < new Date()
+          {    
+              delta_t = simple_hash(extinction_time)
+              return helper(extinction_time + delta_t)
+          }
+          else
+          {
+            return extinction_time
+          }
+        }
         function every_second()
         {
             simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
             next_extinction_time=simulation_helper(simulation_first_extinction_time)
 
+            next_extinction_string=next_extinction_timd.toLocaleTimeString([], options || {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            })
 
-
-
-          var event_html = string.concat("<p>Time until next extinction:",next_extinction_time,"</p>"
+          var event_html = string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
 
           document.getElementById("TheBody").innerHTML=event_html
         }
