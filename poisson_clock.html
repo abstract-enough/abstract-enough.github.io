@@ -13,15 +13,15 @@
               hash_sum += string_to_hash[i]
             }
 
-            #40 species extinct a day
+            //40 species extinct a day
             extinction_rate = 24*60*60/40
 
-            #simulation resolution
+            /_simulation resolution
             resolution = 1000
 
             hash_value = hash_sum % resolution
 
-            exponential_distribution_sample = -1*Math.log(hash_value/1000)/extinction_rate
+            exponential_distribution_sample = -1*Math.log(hash_value/1000)/extinction_rate // natural log
 
             poisson_delta_t = exponential_distribution_sample
 
