@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <title>Poisson clock</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event)
+      {
+
+        /*function simple_hash(extinction_time)
+        {
+            let string_to_hash = extinction_time.toUTCString();
+            hash_sum = 0
+            for (let i = 0; i < string_to_hash.length; i++)
+            {
+              hash_sum += string_to_hash[i]
+            }
+
+            //40 species extinct a day
+            extinction_rate = 24*60*60/40
+
+            simulation_resolution = 1000
+
+            hash_value = hash_sum % simulation_resolution
+
+            exponential_distribution_sample = -1*Math.log(hash_value/simulation_resolution)/extinction_rate // natural log
+
+            poisson_delta_t = exponential_distribution_sample
+
+            return poisson_delta_t
+          
+        }
+        function simulation_helper(extinction_time)
+        {
+          if extinction_time < new Date()
+          {    
+              delta_t = simple_hash(extinction_time)
+              return helper(new Date(extinction_time + 1000*delta_t))
+          }
+          else
+          {
+            return extinction_time
+          }
+        }
+        function every_second()
+        {
+            simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
+            next_extinction_time=simulation_helper(simulation_first_extinction_time)
+
+            next_extinction_string=next_extinction_timd.toLocaleTimeString([], options || {
+                hour: "2-digit",
+                minute: "2-digit",
+                second: "2-digit"
+            })
+
+          var event_html = string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
+
+          document.getElementById("poisson_clock").innerHTML=event_html
+        }
+        var myInterval = setInterval(everySecond, 1000);
+        */
+        document.getElementById("poisson_clock").innerHTML="test1"
+      }
+    </script>
+  </head>
+  <body>
+    <p id="poisson_clock"></p>
+  </body>
+</html>
