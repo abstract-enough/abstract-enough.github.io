@@ -53,12 +53,13 @@
 
           var event_html = string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
 
-          document.getElementById("TheBody").innerHTML=event_html
+          document.getElementById("poisson_clock").innerHTML=event_html
         }
         var myInterval = setInterval(everySecond, 1000);
       }
     </script>
   </head>
-  <body id="TheBody>
+  <body>
+    <p id="poisson_clock"></p>
   </body>
 </html>
