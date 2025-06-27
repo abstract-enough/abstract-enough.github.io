@@ -21,7 +21,7 @@
 
             hash_value = hash_sum % resolution
 
-            exponential_distribution_sample = -ln(hash_value/1000)/extinction_rate
+            exponential_distribution_sample = -1*Math.log(hash_value/1000)/extinction_rate
 
             poisson_delta_t = exponential_distribution_sample
 
