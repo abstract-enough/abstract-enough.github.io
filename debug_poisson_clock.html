@@ -53,9 +53,9 @@
             })
             */
 
-          var event_html = new Date() //string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
-
-          document.getElementById("poisson_clock").innerHTML=event_html
+          var event_date = new Date() //string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
+          let event_string = event_date.toString();
+          document.getElementById("poisson_clock").innerHTML=event_string
         }
         var myInterval = setInterval(everySecond, 1000);
         
