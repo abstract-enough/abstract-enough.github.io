@@ -14,10 +14,19 @@
             }
 
             #40 species extinct a day
-            resolution = 24*60*60/40
+            extinction_rate = 24*60*60/40
 
-            
-            
+            #simulation resolution
+            resolution = 1000
+
+            hash_value = hash_sum % resolution
+
+            exponential_distribution_sample = -ln(hash_value/1000)/extinction_rate
+
+            poisson_delta_t = exponential_distribution_sample
+
+            return poisson_delta_t
+          
         }
         function simulation_helper(extinction_time)
         {
