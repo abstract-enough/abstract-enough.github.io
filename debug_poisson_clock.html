@@ -40,9 +40,10 @@
             return extinction_time
           }
         }
+        */
         function every_second()
         {
-            simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
+            /*simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
             next_extinction_time=simulation_helper(simulation_first_extinction_time)
 
             next_extinction_string=next_extinction_timd.toLocaleTimeString([], options || {
@@ -50,14 +51,15 @@
                 minute: "2-digit",
                 second: "2-digit"
             })
+            */
 
-          var event_html = string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
+          var event_html = new Date() //string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
 
           document.getElementById("poisson_clock").innerHTML=event_html
         }
         var myInterval = setInterval(everySecond, 1000);
-        */
-        document.getElementById("poisson_clock").innerHTML="test1"
+        
+        //document.getElementById("poisson_clock").innerHTML="test1"
       })
     </script>
   </head>
