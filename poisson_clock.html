@@ -3,10 +3,20 @@
     <title>Poisson clock</title>
     <script>
       document.addEventListener("DOMContentLoaded", function(event) {
-        var simulation_start_time = new Date(new Date().getFullYear(), 0, 1);
-        next_extinction
+        function every_second()
+        {
+            simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
+            next_extinction_time=simulation_helper(simulation_first_extinction_time)
+
+
+
+
+          var event_html = string.concat("<p>Time until next extinction:",next_extinction_time,"</p>"
+
+          document.getElementById("TheBody").innerHTML=event_html
+        }
+        var myInterval = setInterval(everySecond, 1000);
       }
-      document.getElementById("TheBody").innerHTML = string.concat("<p>Time until next extinction:",next_extinction_time,"</p>");});
     </script>
   </head>
   <body id="TheBody>
