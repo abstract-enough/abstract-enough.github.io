@@ -48,7 +48,8 @@
             //var next_extinction_time=simulation_first_extinction_time//new Date(simulation_first_extinction_time+10)//simulation_helper(simulation_first_extinction_time)
 
             //var next_extinction_string=next_extinction_time.toLocaleTimeString([], options || {
-            var next_extinction_string=new Date().toLocaleTimeString([], options || {
+            var next_extinction_date=new Date()
+            var next_extinction_string=next_extinction_date.toLocaleTimeString([], options || {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
