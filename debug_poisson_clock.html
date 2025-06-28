@@ -47,16 +47,9 @@
             //var simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
             //var next_extinction_time=simulation_first_extinction_time//new Date(simulation_first_extinction_time+10)//simulation_helper(simulation_first_extinction_time)
 
-            //var next_extinction_string=next_extinction_time.toLocaleTimeString([], options || {
-            /*var next_extinction_date=new Date()
-            var next_extinction_string=next_extinction_date.toLocaleTimeString([], options || {
-                hour: "2-digit",
-                minute: "2-digit",
-                second: "2-digit"
-            })*/
             var temp_date = new Date()
-            var temp_string = temp_date.toString()
-            document.getElementById("poisson_clock").innerHTML=temp_string//string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
+            var next_extinction_string = temp_date.toString()
+            document.getElementById("poisson_clock").innerHTML=string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
         }
         var myInterval = setInterval(every_second, 1000);
       
