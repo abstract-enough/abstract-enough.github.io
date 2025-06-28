@@ -44,12 +44,11 @@
         function every_second()
         {
             
-            
-            
-            var simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
-            var next_extinction_time=simulation_first_extinction_time//new Date(simulation_first_extinction_time+10)//simulation_helper(simulation_first_extinction_time)
+            //var simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
+            //var next_extinction_time=simulation_first_extinction_time//new Date(simulation_first_extinction_time+10)//simulation_helper(simulation_first_extinction_time)
 
-            var next_extinction_string=next_extinction_time.toLocaleTimeString([], options || {
+            //var next_extinction_string=next_extinction_time.toLocaleTimeString([], options || {
+            var next_extinction_string=new Date().toLocaleTimeString([], options || {
                 year: "numeric",
                 month: "long",
                 day: "numeric",
