@@ -44,7 +44,7 @@
         function every_second()
         {
             simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
-            next_extinction_time=simulation_helper(simulation_first_extinction_time)
+            next_extinction_time=new Date(simulation_first_extinction_time+10)//simulation_helper(simulation_first_extinction_time)
 
             next_extinction_string=next_extinction_time.toLocaleTimeString([], options || {
                 year: "4-digit",
