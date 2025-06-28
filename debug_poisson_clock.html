@@ -50,9 +50,9 @@
             var next_extinction_time=simulation_first_extinction_time//new Date(simulation_first_extinction_time+10)//simulation_helper(simulation_first_extinction_time)
 
             var next_extinction_string=next_extinction_time.toLocaleTimeString([], options || {
-                year: "4-digit",
-                month: "2-digit",
-                day: "2-digit",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
                 hour12: true,
                 hour: "2-digit",
                 minute: "2-digit",
