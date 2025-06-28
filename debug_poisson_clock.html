@@ -43,6 +43,9 @@
         */
         function every_second()
         {
+            var event_date = new Date() //string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
+            
+            
             simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
             next_extinction_time=new Date(simulation_first_extinction_time+10)//simulation_helper(simulation_first_extinction_time)
 
@@ -56,9 +59,7 @@
                 second: "2-digit"
             })
 
-          //var event_date = new Date() //string.concat("<p>Time until next extinction:",next_extinction_string,"</p>"
-          //let event_string = event_date.toString();
-          //document.getElementById("poisson_clock").innerHTML=event_string
+            document.getElementById("poisson_clock").innerHTML=next_extinction_string
         }
         var myInterval = setInterval(every_second, 1000);
       
