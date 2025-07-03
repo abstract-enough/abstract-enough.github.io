@@ -8,7 +8,11 @@
         function simple_hash(extinction_time)
         {
             var string_to_hash = extinction_time.toUTCString()
-            var hash_sum = 0
+          
+            var integer_array = string_to_hash.charCodeAt(0)
+            var hash_sum = 0+integer_array
+          
+            //var hash_sum = 0
             //for (let i = 0; i < string_to_hash.length; i++)
             //{
             //  var hash_sum += string_to_hash[i]
