@@ -39,9 +39,10 @@
           var current_time = new Date()
           if (extinction_time < current_time)
           {    
-            var delta_t_seconds = 60*60*24*100 //simple_hash(extinction_time)
-            var extinction_time = new Date(extinction_time + 1000*delta_t_seconds)
-            return simulation_helper(extinction_time)
+            //var delta_t_seconds = 60*60*24*100 //simple_hash(extinction_time)
+            //var extinction_time = new Date(extinction_time + 1000*delta_t_seconds)
+            //return simulation_helper(extinction_time)
+            return simulation_helper(current_time)
           }
           else
           {
