@@ -12,15 +12,12 @@
             var integer_array = string_to_hash.charCodeAt(0)
             var hash_sum = 0+integer_array
           
-            //var hash_sum = 0
-            //for (let i = 0; i < string_to_hash.length; i++)
-            //{
-            //  var hash_sum += string_to_hash[i]
-            //}
-
-            return hash_sum
-
-            /*
+            var hash_sum = 0
+            for (let i = 0; i < string_to_hash.length; i++)
+            {
+              var hash_sum += string_to_hash[i]
+            }
+            
             //40 species extinct a day
             var extinction_rate = 24*60*60/40
 
@@ -33,9 +30,9 @@
             var poisson_delta_t = exponential_distribution_sample
 
             return poisson_delta_t
-            */
+            
         }
-        /*
+        
         function simulation_helper(extinction_time)
         {
           if extinction_time < new Date()
@@ -48,14 +45,14 @@
             return extinction_time
           }
         }
-        */
+        
         function every_second()
         {
 
             var hash = simple_hash(new Date())
           
             var simulation_first_extinction_time = new Date(new Date().getFullYear(), 0, 1);
-            //var next_extinction_time=simulation_first_extinction_time//new Date(simulation_first_extinction_time+10)//simulation_helper(simulation_first_extinction_time)
+            var next_extinction_time=simulation_helper(simulation_first_extinction_time)
 
             var temp_date = new Date()
             var next_extinction_string = temp_date.toString()
