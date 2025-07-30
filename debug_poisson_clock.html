@@ -38,8 +38,8 @@
         {
           if extinction_time < new Date()
           {    
-              var delta_t = 100000 //simple_hash(extinction_time)
-              return helper(new Date(extinction_time + 1000*delta_t))
+              var delta_t = 10 //simple_hash(extinction_time)
+              return simulation_helper(new Date(extinction_time + 1000*delta_t))
           }
           else
           {
@@ -55,7 +55,7 @@
 
             //var temp_date = new Date()
             var next_extinction_string = next_extinction_time.toString()
-            document.getElementById("poisson_clock").innerHTML="<p>v005"+simulation_first_extinction_time+"</p><br><p>Time of next extinction:<br>"+next_extinction_string+"</p>"
+            document.getElementById("poisson_clock").innerHTML="<p>v006"+simulation_first_extinction_time+"</p><br><p>Time of next extinction:<br>"+next_extinction_string+"</p>"
         }
         var myInterval = setInterval(every_second, 1000)
       
