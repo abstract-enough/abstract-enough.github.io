@@ -36,7 +36,8 @@
         
         function simulation_helper(extinction_time)
         {
-          /*if extinction_time < new Date()
+          var current_time = new Date()
+          if extinction_time < current_time
           {    
             //var delta_t = 10 //simple_hash(extinction_time)
             //return simulation_helper(new Date(extinction_time + 1000*delta_t))
@@ -45,8 +46,7 @@
           else
           {
             return extinction_time
-          }*/
-          return extinction_time
+          }
         }
         
         function every_second()
@@ -57,7 +57,7 @@
 
             //var temp_date = new Date()
             var next_extinction_string = next_extinction_time.toString()
-            document.getElementById("poisson_clock").innerHTML="<p>v010"+simulation_first_extinction_time+"</p><br><p>Time of next extinction:<br>"+next_extinction_string+"</p>"
+            document.getElementById("poisson_clock").innerHTML="<p>v011"+simulation_first_extinction_time+"</p><br><p>Time of next extinction:<br>"+next_extinction_string+"</p>"
         }
         var myInterval = setInterval(every_second, 1000)
       
