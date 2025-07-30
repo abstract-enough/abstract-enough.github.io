@@ -40,7 +40,7 @@
           if (extinction_time < current_time)
           {    
             var delta_t_seconds = 60*60*24*100 //simple_hash(extinction_time)
-            var extinction_time = extinction_time + 1000*delta_t_seconds
+            var extinction_time = new Date(extinction_time.getTime() + 1000*delta_t_seconds)
             return simulation_helper(extinction_time)
           }
           else
@@ -65,7 +65,7 @@
     </script>
   </head>
   <body>
-    <p>v020</p>
+    <p>v021</p>
     <p id="poisson_clock"></p>
   </body>
 </html>
