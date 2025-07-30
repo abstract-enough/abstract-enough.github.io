@@ -37,7 +37,7 @@
         {
           if extinction_time < new Date()
           {    
-              var delta_t = simple_hash(extinction_time)
+              var delta_t = 100000 //simple_hash(extinction_time)
               return helper(new Date(extinction_time + 1000*delta_t))
           }
           else
