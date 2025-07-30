@@ -57,7 +57,7 @@
 
             //var temp_date = new Date()
             var next_extinction_string = next_extinction_time.toString()
-            document.getElementById("poisson_clock").innerHTML="<p>v012"+simulation_first_extinction_time+"</p><br><p>Time of next extinction:<br>"+next_extinction_string+"</p>"
+            document.getElementById("poisson_clock").innerHTML="<p>"+simulation_first_extinction_time+"</p><br><p>Time of next extinction:<br>"+next_extinction_string+"</p>"
         }
         var myInterval = setInterval(every_second, 1000)
       
@@ -65,6 +65,7 @@
     </script>
   </head>
   <body>
+    <p>v013</p>
     <p id="poisson_clock"></p>
   </body>
 </html>
