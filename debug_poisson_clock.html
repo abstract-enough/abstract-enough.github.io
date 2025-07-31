@@ -42,15 +42,18 @@
           //first extinction event
           var extinction_time = new Date(new Date().getFullYear(), 0, 1);
 
+          /*
           while (extinction_time < current_time)
           {    
             //var delta_t_seconds = 60*60*24*100 //simple_hash(extinction_time)
             var delta_t_seconds = simple_hash(extinction_time)
             var extinction_time = new Date(extinction_time.getTime() + 1000*delta_t_seconds)
           }
+          */
+          var a1 = simple_hash(extinction_time)
           
           var next_extinction_string = extinction_time.toString()
-          document.getElementById("poisson_clock").innerHTML="<p>Time of next extinction:<br>"+next_extinction_string+"</p>"
+          document.getElementById("poisson_clock").innerHTML="<p>Time of next extinction:<br>"+a1+"</p>"
         }
         var myInterval = setInterval(every_second, 1000)
       
@@ -58,7 +61,7 @@
     </script>
   </head>
   <body>
-    <p>v040</p>
+    <p>v041</p>
     <p id="poisson_clock"></p>
   </body>
 </html>
