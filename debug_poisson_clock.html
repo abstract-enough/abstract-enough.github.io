@@ -15,8 +15,12 @@
             var hash_sum = 0
             for (let i = 0; i < string_to_hash.length; i++)
             {
-              var hash_sum += string_to_hash[i]
+              var hash_sum += string_to_hash.charCodeAt(i)
             }
+
+            return hash_sum
+
+            /*
             
             //40 species extinct a day
             var extinction_rate = 24*60*60/40
@@ -30,7 +34,7 @@
             var poisson_delta_t = exponential_distribution_sample
 
             return poisson_delta_t
-            
+            */
         }
         
         
@@ -66,7 +70,7 @@
     </script>
   </head>
   <body>
-    <p>v022</p>
+    <p>v023</p>
     <p id="poisson_clock"></p>
   </body>
 </html>
