@@ -41,8 +41,7 @@
           var extinction_time = new Date(new Date().getFullYear(), 0, 1);
 
           while (extinction_time < current_time)
-          {    
-            //var delta_t_seconds = 60*60*24*100 //simple_hash(extinction_time)
+          {
             var delta_t_seconds = simple_hash(extinction_time)
             var extinction_time = new Date(extinction_time.getTime() + 1000*delta_t_seconds)
           }
@@ -56,7 +55,9 @@
     </script>
   </head>
   <body>
-    <p>v046</p>
     <p id="poisson_clock"></p>
+    <br>
+    <br>
+    <p>Next extinction time simulated using a Poisson random process with a rate of 40 extinctions per day. </p>
   </body>
 </html>
