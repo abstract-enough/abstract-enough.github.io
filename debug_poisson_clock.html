@@ -9,10 +9,8 @@
         {
             var string_to_hash = extinction_time.toUTCString()
           
-            var integer_array = string_to_hash.charCodeAt(0)
-            var hash_sum = 0+integer_array
-          
             var hash_sum = 0
+      
             for (let i = 0; i < string_to_hash.length; i++)
             {
               var hash_sum += string_to_hash.charCodeAt(i)
@@ -70,7 +68,7 @@
     </script>
   </head>
   <body>
-    <p>v023</p>
+    <p>v024</p>
     <p id="poisson_clock"></p>
   </body>
 </html>
