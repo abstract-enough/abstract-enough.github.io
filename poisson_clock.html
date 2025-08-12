@@ -46,7 +46,7 @@
             var extinction_time = new Date(extinction_time.getTime() + 1000*delta_t_seconds)
           }
           
-          var next_extinction_string = extinction_time.toString()
+          var next_extinction_string = extinction_time.toLocaleTimeString()
           document.getElementById("poisson_clock").innerHTML="<p>Time of next extinction:<br><strong>"+next_extinction_string+"</strong></p>"
         }
         var myInterval = setInterval(every_second, 1000)
