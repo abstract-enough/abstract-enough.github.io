@@ -20,6 +20,10 @@ plot fading color as solutions get older up to 100
       start_min = 0.25 * canvas_size
       start_max = 0.75 * canvas_size
       start_range = start_max - start_min
+
+      time_step = 100 // milliseconds
+      start_vmin = 0
+      start_vmax = 0.1 // 1 pixel per second * 0.1 second per time_step
         
       var planetA_x = start_min + Math.floor(Math.random() * start_range);
       var planetA_y = start_min + Math.floor(Math.random() * start_range);
@@ -27,8 +31,8 @@ plot fading color as solutions get older up to 100
       var planetB_y = start_min + Math.floor(Math.random() * start_range);
       var planetC_x = start_min + Math.floor(Math.random() * start_range);
       var planetC_y = start_min + Math.floor(Math.random() * start_range);
-      
 
+      var planetA_vx =
 
 
         
