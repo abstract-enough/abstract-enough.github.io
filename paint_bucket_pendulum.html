@@ -15,8 +15,23 @@ plot fading color as solutions get older up to 100
     <title>paint bucket pendulum</title>
       <script>
 
-      var planetA_x = 0
+      var canvas_size = screen.width
+
+      start_min = 0.25 * canvas_size
+      start_max = 0.75 * canvas_size
+      start_range = start_max - start_min
+        
+      var planetA_x = start_min + Math.floor(Math.random() * start_range);
+      var planetA_y = start_min + Math.floor(Math.random() * start_range);
+      var planetB_x = start_min + Math.floor(Math.random() * start_range);
+      var planetB_y = start_min + Math.floor(Math.random() * start_range);
+      var planetC_x = start_min + Math.floor(Math.random() * start_range);
+      var planetC_y = start_min + Math.floor(Math.random() * start_range);
       
+
+
+
+        
       document.addEventListener("DOMContentLoaded", function(event)
       {
         
