@@ -5,27 +5,23 @@
       document.addEventListener("DOMContentLoaded", function(event)
       {
 
-        function repeat_lesson()
+        function repeat_lesson(sum, integer)
         {
-          min = 1
-          max = 10
-          range = max - min
-          
-          int_A = Math.floor(Math.random() * range) + 1;
-          int_B = Math.floor(Math.random() * range) + 1;
+          new_sum = sum + integer
 
-          document.getElementById("headline").innerHTML = int_A.toString() + " + " + int_B.toString()
+          document.getElementById("headline").innerHTML = new_sum.toString()
 
           setTimeout(function(){
 
-            int_C = int_A + int_B
-            document.getElementById("headline").innerHTML = int_C.toString()
+            repeat_lesson(new_sum, integer)
             
           }, 10000);
 
           
         }
-        repeat_lesson()
+
+        integer = rand
+        repeat_lesson(integer, integer)
         var myInterval = setInterval(repeat_lesson, 15000)
       
       })
