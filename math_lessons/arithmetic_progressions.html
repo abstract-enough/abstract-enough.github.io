@@ -20,7 +20,12 @@
           
         }
 
-        integer = rand
+        min = 2
+        max = 9
+        range = max - min
+          
+        integer = Math.floor(Math.random() * range) + 1;
+        
         repeat_lesson(integer, integer)
         var myInterval = setInterval(repeat_lesson, 15000)
       
