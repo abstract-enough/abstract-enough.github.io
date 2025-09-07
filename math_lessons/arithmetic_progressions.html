@@ -7,9 +7,8 @@
 
         function repeat_lesson(sum, integer)
         {
-          new_sum = sum + integer
 
-          document.getElementById("headline").innerHTML = new_sum.toString()
+          document.getElementById("headline").innerHTML = sum.toString()
 
           setTimeout(function(){
 
@@ -27,7 +26,7 @@
         integer = Math.floor(Math.random() * range) + min;
         sum = 0
         
-        repeat_lesson(sum, integer)
+        repeat_lesson(integer, integer)
         var myInterval = setInterval(repeat_lesson, 15000)
       
       })
