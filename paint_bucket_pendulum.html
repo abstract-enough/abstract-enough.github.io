@@ -24,6 +24,7 @@ plot fading color as solutions get older up to 100
       time_step = 100 // milliseconds
       start_vmin = 0
       start_vmax = 0.1 // 1 pixel per second * 0.1 second per time_step
+      start_vrange = start_vmax - start_vmin
         
       var planetA_x = start_min + Math.floor(Math.random() * start_range);
       var planetA_y = start_min + Math.floor(Math.random() * start_range);
@@ -32,12 +33,38 @@ plot fading color as solutions get older up to 100
       var planetC_x = start_min + Math.floor(Math.random() * start_range);
       var planetC_y = start_min + Math.floor(Math.random() * start_range);
 
-      var planetA_vx =
+      var planetA_vx = start_vmin + Math.floor(Math.random() * start_vrange);
+      var planetA_vy = start_vmin + Math.floor(Math.random() * start_vrange);
+      var planetB_vx = start_vmin + Math.floor(Math.random() * start_vrange);
+      var planetB_vy = start_vmin + Math.floor(Math.random() * start_vrange);
+      var planetC_vx = start_vmin + Math.floor(Math.random() * start_vrange);
+      var planetC_vy = start_vmin + Math.floor(Math.random() * start_vrange);
+
+      function update_state()
+      {
+        // G/50^2 = ((0.1px/time_step)/time_step)/10  ->  G = 50^2/10 = 250
+
+        var planetA_x_temp = planetA_x_temp
+        var planetA_y_temp = planetA_y_temp
+        var planetB_x_temp = planetB_x_temp
+        var planetB_y_temp = planetB_y_temp
+        var planetC_x_temp = planetC_x_temp
+        var planetC_y_temp = planetC_y_temp
+  
+        var planetA_vx_temp = planetA_vx_temp
+        var planetA_vy_temp = planetA_vy_temp
+        var planetB_vx_temp = planetB_vx_temp
+        var planetB_vy_temp = planetB_vy_temp
+        var planetC_vx_temp = planetC_vx_temp
+        var planetC_vy_temp = planetC_vy_temp
 
 
         
+      }
+        
       document.addEventListener("DOMContentLoaded", function(event)
       {
+
         
         function every_tenth_second()
         {
@@ -47,6 +74,13 @@ plot fading color as solutions get older up to 100
         }
 
         //first 100 steps
+
+        var planetA_x_history = []
+        var planetA_y_history = []
+        var planetB_x_history = []
+        var planetB_y_history = []
+        var planetC_x_history = []
+        var planetC_y_history = []
         //for loop
           //show points 1-i
         
