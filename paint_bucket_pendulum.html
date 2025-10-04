@@ -50,9 +50,9 @@ plot fading color as solutions get older up to 100
       var planetC_ax = 0
       var planetC_ay = 0
 
-      var planetAB_dist_squared = 0
-      var planetBC_dist_squared = 0
-      var planetAC_dist_squared = 0
+      var planetAB_dist_cubed = 0
+      var planetBC_dist_cubed = 0
+      var planetAC_dist_cubed = 0
 
       var plantetAB_x = 0
       var plantetAB_y = 0
@@ -79,9 +79,9 @@ plot fading color as solutions get older up to 100
         var planetC_vx_temp = planetC_vx
         var planetC_vy_temp = planetC_vy
 
-        planetAB_dist_squared = (planetA_x_temp-planetB_x_temp)**2 + (planetA_y_temp-planetB_y_temp)**2
-        planetBC_dist_squared = (planetB_x_temp-planetC_x_temp)**2 + (planetB_y_temp-planetC_y_temp)**2
-        planetAC_dist_squared = (planetA_x_temp-planetC_x_temp)**2 + (planetA_y_temp-planetC_y_temp)**2
+        planetAB_dist_squared = (planetA_x_temp-planetB_x_temp)**(3/2) + (planetA_y_temp-planetB_y_temp)**(3/2)
+        planetBC_dist_squared = (planetB_x_temp-planetC_x_temp)**(3/2) + (planetB_y_temp-planetC_y_temp)**(3/2)
+        planetAC_dist_squared = (planetA_x_temp-planetC_x_temp)**(3/2) + (planetA_y_temp-planetC_y_temp)**(3/2)
 
         plantetAB_x = planetA_x_temp-planetB_x_temp
         plantetAB_y = planetA_y_temp-planetB_y_temp
@@ -90,12 +90,12 @@ plot fading color as solutions get older up to 100
         plantetAC_x = planetA_x_temp-planetC_x_temp
         plantetAC_y = planetA_y_temp-planetC_y_temp
         
-        planetA_ax = G * planetAB_x / planetAB_dist_squared + G * planetAC_x / planetAC_dist_squared
-        planetA_ay = G * planetAB_y / planetAB_dist_squared + G * planetAC_y / planetAC_dist_squared
-        planetB_ax = G * (-1) * planetAB_x / planetAB_dist_squared + G * plantetBC_x / planetBC_dist_squared
-        planetB_ay = G * (-1) * planetAB_y / planetAB_dist_squared + G * plantetBC_y / planetBC_dist_squared
-        planetC_ax = G * (-1) * planetAC_x / planetAC_dist_squared + G * (-1) * plantetBC_x / planetBC_dist_squared
-        planetC_ay = G * (-1) * planetAC_y / planetAC_dist_squared + G * (-1) * plantetBC_y / planetBC_dist_squared
+        planetA_ax = G * planetAB_x / planetAB_dist_squared + G * planetAC_x / planetAC_dist_cubed
+        planetA_ay = G * planetAB_y / planetAB_dist_squared + G * planetAC_y / planetAC_dist_cubed
+        planetB_ax = G * (-1) * planetAB_x / planetAB_dist_squared + G * plantetBC_x / planetBC_dist_cubed
+        planetB_ay = G * (-1) * planetAB_y / planetAB_dist_squared + G * plantetBC_y / planetBC_dist_cubed
+        planetC_ax = G * (-1) * planetAC_x / planetAC_dist_squared + G * (-1) * plantetBC_x / planetBC_dist_cubed
+        planetC_ay = G * (-1) * planetAC_y / planetAC_dist_squared + G * (-1) * plantetBC_y / planetBC_dist_cubed
 
         planetA_vx = planetA_vx_temp + planetA_ax
         planetA_vy = planetA_vy_temp + planetA_ay
