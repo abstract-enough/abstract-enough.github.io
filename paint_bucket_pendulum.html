@@ -15,6 +15,9 @@ plot fading color as solutions get older up to 100
     <title>paint bucket pendulum</title>
       <script>
 
+      const canvas = document.getElementById("space");
+      const canvas2D = c.getContext("2d");
+
       var canvas_size = screen.width
 
       start_min = 0.25 * canvas_size
@@ -25,6 +28,8 @@ plot fading color as solutions get older up to 100
       start_vmin = 0
       start_vmax = 0.1 // 1 pixel per second * 0.1 second per time_step
       start_vrange = start_vmax - start_vmin
+
+      var planet_radius = 3
         
       var planetA_x = start_min + Math.floor(Math.random() * start_range);
       var planetA_y = start_min + Math.floor(Math.random() * start_range);
@@ -113,8 +118,16 @@ plot fading color as solutions get older up to 100
         
       }
 
-      function show_point(planet_x, planet_y, planet_z, color)
+      function show_point(planet_x, planet_y, color)
       {
+        
+        const grad=canvas2D.createRadialGradient(planet_x, planet_y, 0, planet_x, planet_y)
+        grad.addColorStop(0,"darkblue")
+        grad.addColorStop(1,"lightblue")
+        canvas2D.fillStyle = grad;
+        canvas2D.beginPath();
+        canvas2D.arc(planet_x, planet_y, planet_radius, 0, 2 * Math.PI);
+        canvas2D.fill();
         
       }
         
@@ -146,6 +159,6 @@ plot fading color as solutions get older up to 100
     </script>
   </head>
   <body>
-    <canvas id="myCanvas" width="100%" height="100%"</canvas>
+    <canvas id="space" width="100%" height="100%"</canvas>
   </body>
 </html>
