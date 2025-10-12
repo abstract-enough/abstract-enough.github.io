@@ -122,8 +122,8 @@ plot fading color as solutions get older up to 100
       {
         
         const grad=canvas2D.createRadialGradient(planet_x, planet_y, 0, planet_x, planet_y)
-        grad.addColorStop(0,"darkblue")
-        grad.addColorStop(1,"lightblue")
+        grad.addColorStop(0,"000000")
+        grad.addColorStop(1,color)
         canvas2D.fillStyle = grad;
         canvas2D.beginPath();
         canvas2D.arc(planet_x, planet_y, planet_radius, 0, 2 * Math.PI);
