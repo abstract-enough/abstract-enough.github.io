@@ -66,6 +66,12 @@ plot fading color as solutions get older up to 100
       var planetAC_x = 0
       var planetAC_y = 0
  
+      var planetA_x_history = []
+      var planetA_y_history = []
+      var planetB_x_history = []
+      var planetB_y_history = []
+      var planetC_x_history = []
+      var planetC_y_history = []
         
       function update_state()
       {
@@ -83,7 +89,7 @@ plot fading color as solutions get older up to 100
         var planetB_vy_temp = planetB_vy
         var planetC_vx_temp = planetC_vx
         var planetC_vy_temp = planetC_vy
-
+        
         planetAB_dist_squared = (planetA_x_temp-planetB_x_temp)**(3/2) + (planetA_y_temp-planetB_y_temp)**(3/2)
         planetBC_dist_squared = (planetB_x_temp-planetC_x_temp)**(3/2) + (planetB_y_temp-planetC_y_temp)**(3/2)
         planetAC_dist_squared = (planetA_x_temp-planetC_x_temp)**(3/2) + (planetA_y_temp-planetC_y_temp)**(3/2)
@@ -138,20 +144,50 @@ plot fading color as solutions get older up to 100
         function every_tenth_second()
         {
 
+          for(let i = 0; i < 10; i--)
+          {
+            color_string = i.toString() + i.toString() // i.e. 00, 11, 22, 33, 44, 55, 66, 77, 88, or 99
+            
+            show_point(planetA_x_history[9-i], planetA_x_history[9-i], "FFFF"+color_string)
+            show_point(planetB_x_history[9-i], planetB_x_history[9-i], "FF"+color_string+"FF")
+            show_point(planetC_x_history[9-i], planetC_x_history[9-i], color_string+"FFFF")
+            
+          }
           
+          update_state()
+          planetA_x_history.shift()
+          planetA_y_history.shift()
+          planetB_x_history.shift()
+          planetB_y_history.shift()
+          planetC_x_history.shift()
+          planetC_y_history.shift()
+          planetA_x_history.push(planetA_x)
+          planetA_y_history.push(planetA_y)
+          planetB_x_history.push(planetB_x)
+          planetB_y_history.push(planetB_y)
+          planetC_x_history.push(planetC_x)
+          planetC_y_history.push(planetC_y)
           
         }
 
-        //first 100 steps
+        //first 10 steps
 
-        var planetA_x_history = []
-        var planetA_y_history = []
-        var planetB_x_history = []
-        var planetB_y_history = []
-        var planetC_x_history = []
-        var planetC_y_history = []
-        //for loop
-          //show points 1-i
+        planetA_x_history.push(planetA_x)
+        planetA_y_history.push(planetA_y)
+        planetB_x_history.push(planetB_x)
+        planetB_y_history.push(planetB_y)
+        planetC_x_history.push(planetC_x)
+        planetC_y_history.push(planetC_y)
+        for(let i = 1; i <= 9; i++)
+        {
+          update_state()
+          planetA_x_history.push(planetA_x)
+          planetA_y_history.push(planetA_y)
+          planetB_x_history.push(planetB_x)
+          planetB_y_history.push(planetB_y)
+          planetC_x_history.push(planetC_x)
+          planetC_y_history.push(planetC_y)
+        }
         
         var myInterval = setInterval(every_tenth_second, 100)
       
