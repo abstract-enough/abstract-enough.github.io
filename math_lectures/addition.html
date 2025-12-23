@@ -8,7 +8,10 @@
 
      const myButton = document.getElementById("math_button");
 
-     function handleClick() {
+     function handleClick()
+     {
+       myButton.textContent = "test1"
+       /*
           if (flag == "problem")
           {
             min = 1
@@ -26,10 +29,10 @@
           {
             myButton.textContent = int_C
             flag = "problem"
-          }
-    }
+          }*/
+      }
 
-    myButton.addEventListener("click", handleClick);
+      myButton.addEventListener("click", handleClick);
 
     
     </script>
