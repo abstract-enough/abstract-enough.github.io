@@ -2,14 +2,13 @@
   <head>
     <title>addition practice</title>
     <script>
-      document.addEventListener("DOMContentLoaded", function(event)
-      {
-        var flag="problem"
-        var int_C
+      
+     var flag="problem"
+     var int_C
 
-        const myButton = document.getElementById("math_button");
+     const myButton = document.getElementById("math_button");
 
-        function handleClick() {
+     function handleClick() {
           if (flag == "problem")
           {
             min = 1
@@ -28,8 +27,7 @@
             myButton.textContent = int_C
             flag = "problem"
           }
-    
-}
+    }
 
     myButton.addEventListener("click", handleClick);
 
@@ -39,6 +37,6 @@
   <body>
     <p id="headline" style="font-size: 50px;"></p>
     <button id="math_button">start</button>
-    <p>debug ID C</p>
+    <p>debug ID D</p>
   </body>
 </html>
