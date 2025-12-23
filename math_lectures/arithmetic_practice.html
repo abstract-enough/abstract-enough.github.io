@@ -17,10 +17,13 @@
         
       })
 
-     var int_C=0
-     var flag="problem"
+     var int_C = 0
+     var flag = "problem"
+     var operator = ""
+     var min_number = 0
+     var max_number = 0
 
-     function practice_loop(operator, min_number, max_number)
+     function practice_loop()
      {
        problem_button.textContent=operator+flag
        if (flag == "problem")
@@ -87,49 +90,53 @@
      {        
        const min_input = document.getElementById("min_input");
        const max_input = document.getElementById("max_input");
-       const min_number = min_input.value;
-       const max_number = max_input.value;
+       min_number = min_input.value;
+       max_number = max_input.value;
+       operator = "add"
        const intro_screen = document.getElementById("intro_screen");
        intro_screen.innerHTML = "<button id=\"problem_button\"></button>";
        const problem_button = document.getElementById("problem_button");
        problem_button.addEventListener("click", practice_loop);
-       practice_loop("add", min_number, max_number);
+       practice_loop();
      }
      function handle_subtract_click()
      {
        const min_input = document.getElementById("min_input");
        const max_input = document.getElementById("max_input");
-       const min_number = min_input.value;
-       const max_number = max_input.value;
+       min_number = min_input.value;
+       max_number = max_input.value;
+       operator = "subtract"
        const intro_screen = document.getElementById("intro_screen");
        intro_screen.innerHTML = "<button id=\"problem_button\"></button>";
        const problem_button = document.getElementById("problem_button");
        problem_button.addEventListener("click", practice_loop);
-       practice_loop("subtract", min_number, max_number);
+       practice_loop();
      }
      function handle_multiply_click()
      {
        const min_input = document.getElementById("min_input");
        const max_input = document.getElementById("max_input");
-       const min_number = min_input.value;
-       const max_number = max_input.value;
+       min_number = min_input.value;
+       max_number = max_input.value;
+       operator = "multiply"
        const intro_screen = document.getElementById("intro_screen");
        intro_screen.innerHTML = "<button id=\"problem_button\"></button>";
        const problem_button = document.getElementById("problem_button");
        problem_button.addEventListener("click", practice_loop);
-       practice_loop("multiply", min_number, max_number);
+       practice_loop();
      }
      function handle_divide_click()
      {
        const min_input = document.getElementById("min_input");
        const max_input = document.getElementById("max_input");
-       const min_number = min_input.value;
-       const max_number = max_input.value;
+       min_number = min_input.value;
+       max_number = max_input.value;
+       operator = "divide"
        const intro_screen = document.getElementById("intro_screen");
        intro_screen.innerHTML = "<button id=\"problem_button\"></button>";
        const problem_button = document.getElementById("problem_button");
        problem_button.addEventListener("click", practice_loop);
-       practice_loop("divide", min_number, max_number);
+       practice_loop();
      }
 
     
@@ -154,6 +161,6 @@
       
     </section>
     
-    <p>debug ID N</p>
+    <p>debug ID O</p>
   </body>
 </html>
