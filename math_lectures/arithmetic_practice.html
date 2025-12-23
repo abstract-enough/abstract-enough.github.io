@@ -22,7 +22,15 @@
 
      function practice_loop(operator, min_number, max_number)
      {
-       problem_button.textContent=operator
+       problem_button.textContent=operator+flag
+       if (flag == "problem")
+       {
+         flag = "answer";
+       }
+       else
+       {
+         flag = "problem";
+       }
        /*
        if (flag == "problem")
        {
@@ -146,6 +154,6 @@
       
     </section>
     
-    <p>debug ID M</p>
+    <p>debug ID N</p>
   </body>
 </html>
