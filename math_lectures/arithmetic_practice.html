@@ -32,8 +32,8 @@
        
          if (operator == "add")
          {
-           int_A = Math.floor(Math.random() * range) + min_number;
-           int_B = Math.floor(Math.random() * range) + min_number;
+           int_A = Math.floor((Math.random()+1) * range) + min_number;
+           int_B = Math.floor((Math.random()+1) * range) + min_number;
            int_C = int_A + int_B
            problem_button.textContent = int_A.toString() + " + " + int_B.toString()
            
@@ -42,12 +42,12 @@
          if (operator == "subtract")
          {
            
-           int_A = Math.floor(Math.random() * range) + min_number;
+           int_A = Math.floor((Math.random()+1) * range) + min_number;
 
            b_min = min_number
            b_max = int_A - 1
            b_range = b_max - b_min;
-           int_B = Math.floor(Math.random() * b_range) + b_min;
+           int_B = Math.floor((Math.random()+1) * b_range) + b_min;
            int_A = int_B - int_C
            problem_button.textContent = int_A.toString() + " - " + int_B.toString()
            
@@ -55,8 +55,8 @@
    
          if (operator == "multiply")
          {
-           int_A = Math.floor(Math.random() * range) + min_number;
-           int_B = Math.floor(Math.random() * range) + min_number;
+           int_A = Math.floor((Math.random()+1) * range) + min_number;
+           int_B = Math.floor((Math.random()+1) * range) + min_number;
            int_C = int_A * int_B
            problem_button.textContent = int_A.toString() + " x " + int_B.toString()
            
@@ -69,13 +69,13 @@
            c_max = Math.floor(max_number/min_number)
            c_range = c_max-c_min
            
-           int_C = Math.floor(Math.random() * c_range) + c_min;
+           int_C = Math.floor((Math.random()+1) * c_range) + c_min;
 
            b_min = min_number
            b_max = Math.floor(max_number/int_C)
            b_range = b_max-b_min
 
-           int_B = Math.floor(Math.random() * b_range) + b_min;
+           int_B = Math.floor((Math.random()+1) * b_range) + b_min;
 
            int_A = int_B * int_C
 
@@ -170,6 +170,6 @@
       
     </section>
     
-    <p>debug ID G</p>
+    <p>debug ID A</p>
   </body>
 </html>
