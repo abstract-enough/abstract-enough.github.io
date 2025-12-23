@@ -4,6 +4,16 @@
     <script>
       document.addEventListener("DOMContentLoaded", function(event)
       {
+// 1. Select the button and the output area using their IDs
+const myButton = document.getElementById("myButton");
+
+// 2. Define the function you want to run when the button is clicked
+function handleClick() {
+  myButton.textContent = "new"
+}
+
+// 3. Attach the event listener to the button
+myButton.addEventListener("click", handleClick);
 
         function repeat_lesson()
         {
@@ -33,5 +43,6 @@
   </head>
   <body>
     <p id="headline" style="font-size: 50px;"></p>
+    <button id="math_button">
   </body>
 </html>
