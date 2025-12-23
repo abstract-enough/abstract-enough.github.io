@@ -9,9 +9,30 @@
         const subtract_button = document.getElementById("add_button");
         const multiply_button = document.getElementById("add_button");
         const divide_button = document.getElementById("add_button");
-        myButton.textContent = "debug ID G"
+
+        add_button.addEventListener("click", handle_add_click);
+        subtract_button.addEventListener("click", handle_subtract_click);
+        multiply_button.addEventListener("click", handle_multiply_click);
+        divide_button.addEventListener("click", handle_divide_click);
         
-      }
+      })
+
+     function handle_add_click()
+     {
+       add_button.textContent = "test1"
+     }
+     function handle_subtract_click()
+     {
+       add_button.textContent = "test2"
+     }
+     function handle_multiply_click()
+     {
+       add_button.textContent = "test3"
+     }
+     function handle_divide_click()
+     {
+       add_button.textContent = "test4"
+     }
     
      /*
      var flag="problem"
@@ -53,6 +74,6 @@
     <button id="subtract_button" style="font-size: 50px;">subtract</button>
     <button id="multiple_button" style="font-size: 50px;">multiply</button>
     <button id="divide_button" style="font-size: 50px;">divide</button>
-    <p>debug ID A</p>
+    <p>debug ID C</p>
   </body>
 </html>
