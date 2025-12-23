@@ -27,11 +27,39 @@
           {
             range = max_number - min_number
           
-            int_A = Math.floor(Math.random() * range) + min;
-            int_B = Math.floor(Math.random() * range) + min;
-            problem_button.textContent = int_A.toString() + " + " + int_B.toString()
+            if (operator == "add")
+            {
+              int_A = Math.floor(Math.random() * range) + min;
+              int_B = Math.floor(Math.random() * range) + min;
+              problem_button.textContent = int_A.toString() + " + " + int_B.toString()
+              int_C = int_A + int_B
+            }
 
-            int_C = int_A + int_B
+            if (operator == "subtract")
+            {
+              int_A = Math.floor(Math.random() * range) + min;
+              int_B = Math.floor(Math.random() * range) + min;
+              problem_button.textContent = int_A.toString() + " - " + int_B.toString()
+              int_C = int_A - int_B
+            }
+
+            if (operator == "multiply")
+            {
+              int_A = Math.floor(Math.random() * range) + min;
+              int_B = Math.floor(Math.random() * range) + min;
+              problem_button.textContent = int_A.toString() + " x " + int_B.toString()
+              int_C = int_A + int_B
+            }
+
+            if (operator == "divide")
+            {
+              int_C = Math.floor(Math.random() * range) + min;
+              int_A = Math.floor(Math.random() * range) + min;
+              int_B = int_A * int_C
+              problem_button.textContent = int_A.toString() + " / " + int_B.toString()
+              
+            }
+            
             flag = "answer"
           }
           else
