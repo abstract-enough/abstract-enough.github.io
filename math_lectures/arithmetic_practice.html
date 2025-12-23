@@ -34,8 +34,9 @@
          {
            int_A = Math.floor(Math.random() * range) + min_number;
            int_B = Math.floor(Math.random() * range) + min_number;
-           problem_button.textContent = int_A.toString() + " + " + int_B.toString()
            int_C = int_A + int_B
+           problem_button.textContent = int_A.toString() + " + " + int_B.toString()
+           
          }
    
          if (operator == "subtract")
@@ -47,7 +48,7 @@
            b_max = int_A - 1
            b_range = b_max - b_min;
            int_B = Math.floor(Math.random() * b_range) + b_min;
-           int_A = int_B + int_C
+           int_A = int_B - int_C
            problem_button.textContent = int_A.toString() + " - " + int_B.toString()
            
          }
@@ -56,8 +57,9 @@
          {
            int_A = Math.floor(Math.random() * range) + min_number;
            int_B = Math.floor(Math.random() * range) + min_number;
+           int_C = int_A * int_B
            problem_button.textContent = int_A.toString() + " x " + int_B.toString()
-           int_C = int_A + int_B
+           
          }
    
          if (operator == "divide")
@@ -167,6 +169,6 @@
       
     </section>
     
-    <p>debug ID C</p>
+    <p>debug ID D</p>
   </body>
 </html>
