@@ -42,15 +42,10 @@
          if (operator == "subtract")
          {
 
-           a_min = Math.min(min_number + 1, max_number)
-           a_range = max_number - a_min
-           int_A = Math.floor(Math.random() * (a_range+1) ) + a_min;
+           int_B = Math.floor(Math.random() * (range+1) ) + min_number;
+           int_C = Math.floor(Math.random() * (range+1) ) + min_number;
 
-           b_min = min_number
-           b_max = int_A - 1
-           b_range = b_max - b_min;
-           int_B = Math.floor(Math.random() * (b_range+1) ) + b_min;
-           int_C = int_A - int_B
+           int_A = int_B + int_C
            problem_button.textContent = int_A.toString() + " - " + int_B.toString()
            
          }
@@ -66,18 +61,9 @@
    
          if (operator == "divide")
          {
-
-           c_min = 1
-           c_max = Math.floor(max_number/min_number)
-           c_range = c_max-c_min
            
-           int_C = Math.floor(Math.random() * (c_range+1) ) + c_min;
-
-           b_min = min_number
-           b_max = Math.floor(max_number/int_C)
-           b_range = b_max-b_min
-
-           int_B = Math.floor(Math.random() * (b_range+1) ) + b_min;
+           int_B = Math.floor(Math.random() * (range+1) ) + min_number;
+           int_C = Math.floor(Math.random() * (range+1) ) + min_number;
 
            int_A = int_B * int_C
 
