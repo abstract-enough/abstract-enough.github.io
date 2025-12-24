@@ -42,8 +42,9 @@
          if (operator == "subtract")
          {
 
-           
-           int_A = Math.floor(Math.random() * (range+1) ) + min_number;
+           a_min = Math.min(min_number + 1, max_number)
+           a_range = max_number - a_min
+           int_A = Math.floor(Math.random() * (a_range+1) ) + min_number;
 
            b_min = min_number
            b_max = int_A - 1
