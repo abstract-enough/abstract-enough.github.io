@@ -2,7 +2,7 @@
 
 Clean single page website demo.
 
-[backup website](https://github.com/abstract-enough/google-colab-git)
+[code to automatically backup website](https://github.com/abstract-enough/google-colab-git)
 
 
 DNS settings for host
